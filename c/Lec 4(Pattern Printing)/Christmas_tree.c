@@ -34,13 +34,13 @@ int main(){
     printf("Enter the desired height for each triangle (minimum 3): ");
     scanf("%d",&triangleHieght);
     
-    if(row>=3){
+    if(triangleHieght>=3){
     //Getting the number of tiabgles
     printf("Enter the number of triangles: ");
     scanf("%d",&triangleCount);
     
     // looping till all the triangles printed
-    for(int i=1;i<=trianglecount;i++){
+    for(int i=1;i<=triangleCount;i++){
         christmasTriangle(triangleHieght);
     }
 
