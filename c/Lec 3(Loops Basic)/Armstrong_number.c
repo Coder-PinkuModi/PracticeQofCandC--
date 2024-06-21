@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
     printf("Enter the number to check number is Armstrong is not :");
