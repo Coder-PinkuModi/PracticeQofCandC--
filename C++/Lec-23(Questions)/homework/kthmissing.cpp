@@ -22,14 +22,14 @@ Explanation: The missing positive integers are [5,6,7,...]. The 2nd missing posi
 using namespace std;
 // My soltuon:
 /*
-int findKthPositive(vector<int> &arr, int k)
+int findKthPositive(int arr[],int n, int k)
 {
     int miss[k + 1], count = 0, flag = 0;
-    for (int i = 1; i <= arr.size() + k; i++)
+    for (int i = 1; i <= n + k; i++)
     {
-        if (count < k)
+        if (count < k+1)
         {
-            for (int j = 0; j < arr.size(); j++)
+            for (int j = 0; j <n; j++)
             {
                 if (i == arr[j])
                     flag = 1;
@@ -48,11 +48,11 @@ int findKthPositive(vector<int> &arr, int k)
 
 // chatgpt solution after optiomization:
 /*
-int findKthPositive(vector<int>& arr, int k) {
+int findKthPositive(int arr,int n, int k) {
     int missingCount = 0, current = 1, index = 0;
 
     while (missingCount < k) {
-        if (index < arr.size() && arr[index] == current) {
+        if (index < n && arr[index] == current) {
             index++;
         } else {
             missingCount++;

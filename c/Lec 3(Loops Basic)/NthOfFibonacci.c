@@ -16,10 +16,9 @@ int main() {
     }
 
     a = 1;
-    b = 1;
-    printf("The series is: %d %d", a, b);
+    b = 0;
 
-    for (i = 3; i <= n; i++) {
+    for (i =1; i <= n; i++) {
         sum = a + b;
         a = b;
         b = sum;
