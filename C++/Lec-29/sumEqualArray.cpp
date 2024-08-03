@@ -25,6 +25,7 @@ int main()
     cout<<"Enter the total length of a vector: ";
     cin>>n;
     vector<int>v(n);
+    cout<<"Enter the element in array: ";
     for(int i=0;i<n;i++){
         cin>>v[i];
     }
