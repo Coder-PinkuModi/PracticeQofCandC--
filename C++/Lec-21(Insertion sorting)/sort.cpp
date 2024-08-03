@@ -45,6 +45,20 @@ void increaseSort(int arr[], int n)
         }
         flag = false;
     }
+
+    // different approach for same algorithm
+    // for(int i=1;i<n;i++){
+    //     int current_ele=arr[i];
+    //     int j=i-1;
+
+    //     while(j<=0 && arr[j]<current_ele){
+    //         arr[j+1]=arr[j];
+    //         j--;
+    //     }
+    //     arr[j+1]=current_ele;
+    // }
+
+    
 }
 
 int main()
