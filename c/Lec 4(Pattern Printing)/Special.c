@@ -15,7 +15,7 @@ int main()
             if(b>n) b=2*n-j;
             if(a<b) min=a;
             else min=b;
-            printf("%d",n+1-min);
+            printf("%d ",n+1-min);
         }
         printf("\n");
     }
