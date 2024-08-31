@@ -1,8 +1,28 @@
 #include <iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
-int storeWater(vector<int>height){
+int storeWaterBruteforce(vector<int>height){
+    int minOfMaxHeight=0,n=height.size(),index,maxLeft=0,maxRight=0,storedWater=0;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<i;j++){ //loop to find the leftMax at particular index
+        if(maxLeft<height[j]) maxLeft=height[j];
+        }
+        for(int k=i+1;k<=n-1;k++){
+            if(maxRight<height[k]) maxRight=height[k];
+        }
+        
+        if(maxLeft!=0 && maxRight!=0){
+            minOfMaxHeight=min(maxLeft,maxRight);
+            if(minOfMaxHeight-height[i]>0) storedWater+=minOfMaxHeight-height[i];
+        }
+        maxLeft=0;maxRight=0;
+    }
+    return storedWater;
+}
+
+int storeWater(vector<int>height){ //optimized method
     int maxHeight=0,n=height.size(),index,leftMax=0,rightMax=0,storedWater=0;
         for(int i=0;i<n;i++){
             if(height[i]>maxHeight) {
@@ -10,8 +30,6 @@ int storeWater(vector<int>height){
                 index=i;
             }
         }
-
-        cout<<"maxHieht: "<<height[index]<<endl;
 
         for(int i=0;i<index;i++){
             if(leftMax>height[i])
@@ -40,7 +58,7 @@ int main()
     }
     
     int totalWaterStored = storeWater(height);
-    cout<<totalWaterStored;
+    cout<<"Total water stored: "<<totalWaterStored;
 
     return 0;
 }
