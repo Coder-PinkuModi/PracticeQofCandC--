@@ -61,6 +61,8 @@
     "*.ejs": "html",
     "iostream": "cpp",
     "vector": "cpp",
-    "*.tcc": "cpp"
+    "*.tcc": "cpp",
+    "ostream": "cpp",
+    "functional": "cpp"
   }
 }
