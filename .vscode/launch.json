@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/PracticeQofCandC++/C++/Lec-29",
-      "program": "d:/PracticeQofCandC++/C++/Lec-29/build/Debug/outDebug",
+      "cwd": "d:/PracticeQofCandC++/C++/practice problem",
+      "program": "d:/PracticeQofCandC++/C++/practice problem/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
